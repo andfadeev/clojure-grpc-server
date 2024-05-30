@@ -1,4 +1,4 @@
-package com.kroo.api.v1;
+package com.andreyfadeev.api.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -6,38 +6,38 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.64.0)",
-    comments = "Source: proto/com/kroo/api/v1/add_service.proto")
+    comments = "Source: com/andreyfadeev/api/v1/add_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AddServiceGrpc {
 
   private AddServiceGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "com.kroo.api.v1.AddService";
+  public static final java.lang.String SERVICE_NAME = "com.andreyfadeev.api.v1.AddService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.kroo.api.v1.AddRequest,
-      com.kroo.api.v1.AddResponse> getAddMethod;
+  private static volatile io.grpc.MethodDescriptor<com.andreyfadeev.api.v1.AddRequest,
+      com.andreyfadeev.api.v1.AddResponse> getAddMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Add",
-      requestType = com.kroo.api.v1.AddRequest.class,
-      responseType = com.kroo.api.v1.AddResponse.class,
+      requestType = com.andreyfadeev.api.v1.AddRequest.class,
+      responseType = com.andreyfadeev.api.v1.AddResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.kroo.api.v1.AddRequest,
-      com.kroo.api.v1.AddResponse> getAddMethod() {
-    io.grpc.MethodDescriptor<com.kroo.api.v1.AddRequest, com.kroo.api.v1.AddResponse> getAddMethod;
+  public static io.grpc.MethodDescriptor<com.andreyfadeev.api.v1.AddRequest,
+      com.andreyfadeev.api.v1.AddResponse> getAddMethod() {
+    io.grpc.MethodDescriptor<com.andreyfadeev.api.v1.AddRequest, com.andreyfadeev.api.v1.AddResponse> getAddMethod;
     if ((getAddMethod = AddServiceGrpc.getAddMethod) == null) {
       synchronized (AddServiceGrpc.class) {
         if ((getAddMethod = AddServiceGrpc.getAddMethod) == null) {
           AddServiceGrpc.getAddMethod = getAddMethod =
-              io.grpc.MethodDescriptor.<com.kroo.api.v1.AddRequest, com.kroo.api.v1.AddResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.andreyfadeev.api.v1.AddRequest, com.andreyfadeev.api.v1.AddResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Add"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.kroo.api.v1.AddRequest.getDefaultInstance()))
+                  com.andreyfadeev.api.v1.AddRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.kroo.api.v1.AddResponse.getDefaultInstance()))
+                  com.andreyfadeev.api.v1.AddResponse.getDefaultInstance()))
               .setSchemaDescriptor(new AddServiceMethodDescriptorSupplier("Add"))
               .build();
         }
@@ -96,8 +96,8 @@ public final class AddServiceGrpc {
 
     /**
      */
-    default void add(com.kroo.api.v1.AddRequest request,
-        io.grpc.stub.StreamObserver<com.kroo.api.v1.AddResponse> responseObserver) {
+    default void add(com.andreyfadeev.api.v1.AddRequest request,
+        io.grpc.stub.StreamObserver<com.andreyfadeev.api.v1.AddResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddMethod(), responseObserver);
     }
   }
@@ -131,8 +131,8 @@ public final class AddServiceGrpc {
 
     /**
      */
-    public void add(com.kroo.api.v1.AddRequest request,
-        io.grpc.stub.StreamObserver<com.kroo.api.v1.AddResponse> responseObserver) {
+    public void add(com.andreyfadeev.api.v1.AddRequest request,
+        io.grpc.stub.StreamObserver<com.andreyfadeev.api.v1.AddResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAddMethod(), getCallOptions()), request, responseObserver);
     }
@@ -156,7 +156,7 @@ public final class AddServiceGrpc {
 
     /**
      */
-    public com.kroo.api.v1.AddResponse add(com.kroo.api.v1.AddRequest request) {
+    public com.andreyfadeev.api.v1.AddResponse add(com.andreyfadeev.api.v1.AddRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAddMethod(), getCallOptions(), request);
     }
@@ -180,8 +180,8 @@ public final class AddServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.kroo.api.v1.AddResponse> add(
-        com.kroo.api.v1.AddRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.andreyfadeev.api.v1.AddResponse> add(
+        com.andreyfadeev.api.v1.AddRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAddMethod(), getCallOptions()), request);
     }
@@ -207,8 +207,8 @@ public final class AddServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_ADD:
-          serviceImpl.add((com.kroo.api.v1.AddRequest) request,
-              (io.grpc.stub.StreamObserver<com.kroo.api.v1.AddResponse>) responseObserver);
+          serviceImpl.add((com.andreyfadeev.api.v1.AddRequest) request,
+              (io.grpc.stub.StreamObserver<com.andreyfadeev.api.v1.AddResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -232,8 +232,8 @@ public final class AddServiceGrpc {
           getAddMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.kroo.api.v1.AddRequest,
-              com.kroo.api.v1.AddResponse>(
+              com.andreyfadeev.api.v1.AddRequest,
+              com.andreyfadeev.api.v1.AddResponse>(
                 service, METHODID_ADD)))
         .build();
   }
@@ -244,7 +244,7 @@ public final class AddServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.kroo.api.v1.AddServiceOuterClass.getDescriptor();
+      return com.andreyfadeev.api.v1.AddServiceOuterClass.getDescriptor();
     }
 
     @java.lang.Override

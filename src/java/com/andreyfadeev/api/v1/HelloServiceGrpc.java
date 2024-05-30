@@ -1,4 +1,4 @@
-package com.kroo.api.v1;
+package com.andreyfadeev.api.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -6,38 +6,38 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.64.0)",
-    comments = "Source: proto/com/kroo/api/v1/hello_service.proto")
+    comments = "Source: com/andreyfadeev/api/v1/hello_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class HelloServiceGrpc {
 
   private HelloServiceGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "com.kroo.api.v1.HelloService";
+  public static final java.lang.String SERVICE_NAME = "com.andreyfadeev.api.v1.HelloService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.kroo.api.v1.HelloRequest,
-      com.kroo.api.v1.HelloResponse> getHelloMethod;
+  private static volatile io.grpc.MethodDescriptor<com.andreyfadeev.api.v1.HelloRequest,
+      com.andreyfadeev.api.v1.HelloResponse> getHelloMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "hello",
-      requestType = com.kroo.api.v1.HelloRequest.class,
-      responseType = com.kroo.api.v1.HelloResponse.class,
+      requestType = com.andreyfadeev.api.v1.HelloRequest.class,
+      responseType = com.andreyfadeev.api.v1.HelloResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.kroo.api.v1.HelloRequest,
-      com.kroo.api.v1.HelloResponse> getHelloMethod() {
-    io.grpc.MethodDescriptor<com.kroo.api.v1.HelloRequest, com.kroo.api.v1.HelloResponse> getHelloMethod;
+  public static io.grpc.MethodDescriptor<com.andreyfadeev.api.v1.HelloRequest,
+      com.andreyfadeev.api.v1.HelloResponse> getHelloMethod() {
+    io.grpc.MethodDescriptor<com.andreyfadeev.api.v1.HelloRequest, com.andreyfadeev.api.v1.HelloResponse> getHelloMethod;
     if ((getHelloMethod = HelloServiceGrpc.getHelloMethod) == null) {
       synchronized (HelloServiceGrpc.class) {
         if ((getHelloMethod = HelloServiceGrpc.getHelloMethod) == null) {
           HelloServiceGrpc.getHelloMethod = getHelloMethod =
-              io.grpc.MethodDescriptor.<com.kroo.api.v1.HelloRequest, com.kroo.api.v1.HelloResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.andreyfadeev.api.v1.HelloRequest, com.andreyfadeev.api.v1.HelloResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "hello"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.kroo.api.v1.HelloRequest.getDefaultInstance()))
+                  com.andreyfadeev.api.v1.HelloRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.kroo.api.v1.HelloResponse.getDefaultInstance()))
+                  com.andreyfadeev.api.v1.HelloResponse.getDefaultInstance()))
               .setSchemaDescriptor(new HelloServiceMethodDescriptorSupplier("hello"))
               .build();
         }
@@ -96,8 +96,8 @@ public final class HelloServiceGrpc {
 
     /**
      */
-    default void hello(com.kroo.api.v1.HelloRequest request,
-        io.grpc.stub.StreamObserver<com.kroo.api.v1.HelloResponse> responseObserver) {
+    default void hello(com.andreyfadeev.api.v1.HelloRequest request,
+        io.grpc.stub.StreamObserver<com.andreyfadeev.api.v1.HelloResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getHelloMethod(), responseObserver);
     }
   }
@@ -131,8 +131,8 @@ public final class HelloServiceGrpc {
 
     /**
      */
-    public void hello(com.kroo.api.v1.HelloRequest request,
-        io.grpc.stub.StreamObserver<com.kroo.api.v1.HelloResponse> responseObserver) {
+    public void hello(com.andreyfadeev.api.v1.HelloRequest request,
+        io.grpc.stub.StreamObserver<com.andreyfadeev.api.v1.HelloResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getHelloMethod(), getCallOptions()), request, responseObserver);
     }
@@ -156,7 +156,7 @@ public final class HelloServiceGrpc {
 
     /**
      */
-    public com.kroo.api.v1.HelloResponse hello(com.kroo.api.v1.HelloRequest request) {
+    public com.andreyfadeev.api.v1.HelloResponse hello(com.andreyfadeev.api.v1.HelloRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getHelloMethod(), getCallOptions(), request);
     }
@@ -180,8 +180,8 @@ public final class HelloServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.kroo.api.v1.HelloResponse> hello(
-        com.kroo.api.v1.HelloRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.andreyfadeev.api.v1.HelloResponse> hello(
+        com.andreyfadeev.api.v1.HelloRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getHelloMethod(), getCallOptions()), request);
     }
@@ -207,8 +207,8 @@ public final class HelloServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_HELLO:
-          serviceImpl.hello((com.kroo.api.v1.HelloRequest) request,
-              (io.grpc.stub.StreamObserver<com.kroo.api.v1.HelloResponse>) responseObserver);
+          serviceImpl.hello((com.andreyfadeev.api.v1.HelloRequest) request,
+              (io.grpc.stub.StreamObserver<com.andreyfadeev.api.v1.HelloResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -232,8 +232,8 @@ public final class HelloServiceGrpc {
           getHelloMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.kroo.api.v1.HelloRequest,
-              com.kroo.api.v1.HelloResponse>(
+              com.andreyfadeev.api.v1.HelloRequest,
+              com.andreyfadeev.api.v1.HelloResponse>(
                 service, METHODID_HELLO)))
         .build();
   }
@@ -244,7 +244,7 @@ public final class HelloServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.kroo.api.v1.HelloServiceOuterClass.getDescriptor();
+      return com.andreyfadeev.api.v1.HelloServiceOuterClass.getDescriptor();
     }
 
     @java.lang.Override

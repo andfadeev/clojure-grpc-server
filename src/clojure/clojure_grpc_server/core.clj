@@ -2,7 +2,7 @@
   (:gen-class)
   (:require [clojure.string :as str])
   (:import (clojure.lang IDeref)
-           (com.kroo.api.v1 AddRequest AddResponse AddServiceGrpc AddServiceGrpc$AddServiceImplBase HelloRequest HelloResponse HelloServiceGrpc HelloServiceGrpc$HelloServiceImplBase)
+           (com.andreyfadeev.api.v1 AddRequest AddResponse AddServiceGrpc AddServiceGrpc$AddServiceImplBase HelloRequest HelloResponse HelloServiceGrpc HelloServiceGrpc$HelloServiceImplBase)
            (io.grpc BindableService ManagedChannel ManagedChannelBuilder Server ServerBuilder)
            (io.grpc.stub StreamObserver)
            (java.io Closeable)))

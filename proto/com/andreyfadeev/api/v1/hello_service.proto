@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package com.kroo.api.v1;
+package com.andreyfadeev.api.v1;
 
-option java_package = "com.kroo.api.v1";
+option java_package = "com.andreyfadeev.api.v1";
 option java_multiple_files = true;
 
 service HelloService {
