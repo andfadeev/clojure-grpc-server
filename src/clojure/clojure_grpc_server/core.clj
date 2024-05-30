@@ -12,6 +12,9 @@
 
 ;; The most important feature is to detect breaking changes with `buf breaking ...`, more about options: https://buf.build/docs/reference/inputs
 
+;; All those buf cli steps should be part of checks in CI, so we protected against breaking changes merges.
+;; If API is under development there is a concept unstable API that allow all changes.
+
 ;; Other benefit is that same code will be used in clients for gRPC requests, but also could be used in tests.
 ;; No more duplicating and guessing API format in the tests.
 
