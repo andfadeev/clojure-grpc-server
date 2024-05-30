@@ -2,7 +2,7 @@
   (:gen-class)
   (:require [clojure.string :as str])
   (:import (com.kroo.api.v1 AddRequest AddResponse AddServiceGrpc AddServiceGrpc$AddServiceImplBase HelloRequest HelloResponse HelloServiceGrpc HelloServiceGrpc$HelloServiceImplBase)
-           (io.grpc ManagedChannelBuilder Server ServerBuilder)
+           (io.grpc BindableService ManagedChannelBuilder Server ServerBuilder)
            (io.grpc.stub StreamObserver)))
 
 ;; README
@@ -57,11 +57,11 @@
 
 ;; gRPC Server implementation: https://github.com/otwieracz/clj-grpc/blob/master/src/clj/clj_grpc/server.clj
 
-(def ^HelloServiceGrpc add-service-impl
+(def ^BindableService add-service-impl
   (proxy
     [AddServiceGrpc$AddServiceImplBase]
     []
-    (add [ ^AddRequest request ^StreamObserver response-observer]
+    (add [^AddRequest request ^StreamObserver response-observer]
       (println "Handling request /add in gRPC server" request)
       (let [response (-> (AddResponse/newBuilder)
                          (.setSum (+ (.getX request) (.getY request)))
@@ -69,11 +69,11 @@
         (.onNext response-observer response)
         (.onCompleted response-observer)))))
 
-(def ^HelloServiceGrpc hello-service-impl
+(def ^BindableService hello-service-impl
   (proxy
     [HelloServiceGrpc$HelloServiceImplBase]
     []
-    (hello [ ^HelloRequest request ^StreamObserver response-observer]
+    (hello [^HelloRequest request ^StreamObserver response-observer]
       (call-grpc-add)
       ;; This is where we can start writing plain Clojure code
       ;; we can get all data from Buf generated classes for request, e.g. HelloRequest
