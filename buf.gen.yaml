@@ -1,0 +1,6 @@
+version: v2
+plugins:
+  - remote: buf.build/grpc/java:v1.64.0
+    out: src/java
+  - remote: buf.build/protocolbuffers/java
+    out: src/java
