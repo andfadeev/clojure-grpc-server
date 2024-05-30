@@ -57,8 +57,8 @@
 
 ;; gRPC Server implementation: https://github.com/otwieracz/clj-grpc/blob/master/src/clj/clj_grpc/server.clj
 
-(defn ^BindableService build-add-service
-  [{:keys [grpc-channel]}]
+(defn build-add-service
+  ^BindableService [{:keys [grpc-channel]}]
   (proxy
     [AddServiceGrpc$AddServiceImplBase]
     []
@@ -70,8 +70,8 @@
         (.onNext response-observer response)
         (.onCompleted response-observer)))))
 
-(defn ^BindableService build-hello-service
-  [{:keys [grpc-channel] :as deps}]
+(defn build-hello-service
+  ^BindableService [{:keys [grpc-channel] :as deps}]
   (proxy
     [HelloServiceGrpc$HelloServiceImplBase]
     []
