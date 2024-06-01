@@ -9,21 +9,13 @@
            (org.wiremock.grpc GrpcExtensionFactory)
            (org.wiremock.grpc.dsl WireMockGrpc WireMockGrpcService)))
 
-(defmacro typed-array
-  [klass vals]
-  (let [^Class resolved (resolve klass)]
-    (with-meta
-      (list 'into-array resolved vals)
-      {:tag (str "[L" (.getName resolved) ";")})))
-
 (deftest grpc-wiremock-testing
   (let [^WireMockServer wm (WireMockServer.
                              (-> (WireMockConfiguration/wireMockConfig)
                                  (.dynamicPort)
                                  (.withRootDirectory "src/java")
-                                 (.extensions (typed-array
-                                                ExtensionFactory
-                                                [(GrpcExtensionFactory.)]))))]
+                                 (.extensions
+                                   (into-array ExtensionFactory [(GrpcExtensionFactory.)]))))]
 
     (.start wm)
 
