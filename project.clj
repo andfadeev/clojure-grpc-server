@@ -9,7 +9,10 @@
                  [io.grpc/grpc-protobuf "1.64.0"]
                  [com.google.protobuf/protobuf-java "4.27.0"]
                  [javax.annotation/javax.annotation-api "1.3.2"]
-                 ]
+
+                 ;; testing
+                 [org.wiremock/wiremock-standalone "3.6.0"]
+                 [org.wiremock/wiremock-grpc-extension "0.6.0"]]
   :main ^:skip-aot clojure-grpc-server.core
   :target-path "target/%s"
   :source-paths ["src/clojure"]

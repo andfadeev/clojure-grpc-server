@@ -27,14 +27,15 @@
   [{:keys [grpc-channel]}]
   (let [stub (HelloServiceGrpc/newBlockingStub grpc-channel)
         ;; Build request object (Buf generated class from .proto schemas)
-        request (->(HelloRequest/newBuilder)
-                   (.setFirstName "Andrey")
-                   (.setLastName "Fadeev")
-                   (.build))]
+        request (-> (HelloRequest/newBuilder)
+                    (.setFirstName "Andrey")
+                    (.setLastName "Fadeev")
+                    (.build))]
     (println "Calling hello RPC")
     ;; Execute gRPC
     (let [response (.hello stub request)]
-      (println "Got response, the greeting:" (.getGreeting response)))))
+      (println "Got response, the greeting:" (.getGreeting response))
+      (.getGreeting response))))
 
 (defn create-grpc-channel
   [{:keys [host port]}]
