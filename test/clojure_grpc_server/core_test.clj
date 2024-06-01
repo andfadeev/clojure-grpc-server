@@ -1,5 +1,5 @@
 (ns clojure-grpc-server.core-test
-  (:require [clojure.test :refer [deftest testing is]]
+  (:require [clojure.test :refer [deftest is]]
             [clojure-grpc-server.core :as core])
   (:import (com.andreyfadeev.api.v1 HelloRequest HelloResponse HelloServiceGrpc)
            (com.github.tomakehurst.wiremock WireMockServer)
