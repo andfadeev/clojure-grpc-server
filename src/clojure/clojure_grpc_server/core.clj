@@ -94,8 +94,8 @@
            add-service]}]
   (let [^Server grpc-server (-> (ServerBuilder/forPort 9001)
                                 ;; Multiple gRPC services could be added here, allowing modular code
-                                (.addService hello-service)
-                                (.addService add-service)
+                                (.addService ^BindableService hello-service)
+                                (.addService ^BindableService add-service)
                                 (.build))]
     (.start grpc-server)
     grpc-server))
