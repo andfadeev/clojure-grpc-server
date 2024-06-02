@@ -12,6 +12,7 @@ service HelloService {
 message HelloRequest {
   string first_name = 1;
   string last_name = 2;
+  int32 age = 3;
 }
 
 message HelloResponse {
