@@ -49,7 +49,7 @@ public final class HelloServiceOuterClass {
       "equest\022\035\n\nfirst_name\030\001 \001(\tR\tfirstName\022\033\n" +
       "\tlast_name\030\002 \001(\tR\010lastName\"+\n\rHelloRespo" +
       "nse\022\032\n\010greeting\030\001 \001(\tR\010greeting2f\n\014Hello" +
-      "Service\022V\n\005hello\022%.com.andreyfadeev.api." +
+      "Service\022V\n\005Hello\022%.com.andreyfadeev.api." +
       "v1.HelloRequest\032&.com.andreyfadeev.api.v" +
       "1.HelloResponseB\033\n\027com.andreyfadeev.api." +
       "v1P\001b\006proto3"

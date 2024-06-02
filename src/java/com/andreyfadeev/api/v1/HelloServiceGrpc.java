@@ -19,7 +19,7 @@ public final class HelloServiceGrpc {
       com.andreyfadeev.api.v1.HelloResponse> getHelloMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "hello",
+      fullMethodName = SERVICE_NAME + '/' + "Hello",
       requestType = com.andreyfadeev.api.v1.HelloRequest.class,
       responseType = com.andreyfadeev.api.v1.HelloResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
@@ -32,13 +32,13 @@ public final class HelloServiceGrpc {
           HelloServiceGrpc.getHelloMethod = getHelloMethod =
               io.grpc.MethodDescriptor.<com.andreyfadeev.api.v1.HelloRequest, com.andreyfadeev.api.v1.HelloResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "hello"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Hello"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.andreyfadeev.api.v1.HelloRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.andreyfadeev.api.v1.HelloResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new HelloServiceMethodDescriptorSupplier("hello"))
+              .setSchemaDescriptor(new HelloServiceMethodDescriptorSupplier("Hello"))
               .build();
         }
       }

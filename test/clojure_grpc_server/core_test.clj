@@ -24,10 +24,10 @@
                                HelloServiceGrpc/SERVICE_NAME)]
 
       (.stubFor mock-hello-service
-                (-> (WireMockGrpc/method "hello")
+                (-> (WireMockGrpc/method "Hello")
                     (.withRequestMessage (WireMockGrpc/equalToMessage
                                            (-> (HelloRequest/newBuilder)
-                                               (.setFirstName "Andrey1")
+                                               (.setFirstName "Andrey")
                                                (.setLastName "Fadeev"))))
                     (.willReturn (WireMockGrpc/message
                                    (-> (HelloResponse/newBuilder)
