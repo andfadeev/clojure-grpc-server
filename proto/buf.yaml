@@ -1,4 +1,7 @@
 version: v2
+modules:
+  - path: .
+    name: buf.build/andreyfadeev/clojure-grpc-server
 lint:
   use:
     - DEFAULT
