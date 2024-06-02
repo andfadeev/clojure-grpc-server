@@ -27,7 +27,7 @@
                 (-> (WireMockGrpc/method "hello")
                     (.withRequestMessage (WireMockGrpc/equalToMessage
                                            (-> (HelloRequest/newBuilder)
-                                               (.setFirstName "Andrey")
+                                               (.setFirstName "Andrey1")
                                                (.setLastName "Fadeev"))))
                     (.willReturn (WireMockGrpc/message
                                    (-> (HelloResponse/newBuilder)
